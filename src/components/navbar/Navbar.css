@@ -1,0 +1,53 @@
+.navbar {
+  background-color: rgb(19, 17, 17);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect on navigation links */
+.navbar a:hover {
+  color: #AAA777; /* Change text color on hover */
+}
+
+.navbar-nav {
+  margin-left: auto;
+}
+
+.navbar .nav-link {
+  color: #ffffff; /* Change this to your desired text color */
+}
+
+.navbar .navbar-brand {
+  color: #AAA777;
+}
+
+.navbar .nav-link.active
+ {
+  color: #f8f9fa; /* Change this to your desired hover/active color */
+}
+.navbar .nav-link:focus,
+.navbar .nav-link:hover{
+  color: #AAA777; 
+}
+
+.navbar-nav .nav-item {
+  display: inline-block;
+  margin: 0 30px;
+}
+
+.navbar-nav .nav-link {
+  padding: 10px 15px 20px 25px;
+}

@@ -1,33 +1,53 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import './Navbar.css';
 
 function Navbar() {
+  const [searchQuery, setSearchQuery] = React.useState('');
+
+  const handleSearchChange = (event) => {
+    setSearchQuery(event.target.value);
+    performSearch(event.target.value);
+  };
+
+  const performSearch = (query) => {
+    // Implement your search logic here
+    console.log('Searching for:', query);
+  };
+
   return (
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</nav>
-  )
+    <nav className="navbar navbar-expand-lg">
+      <div className="container-fluid">
+        <Link className="navbar-brand" to="/">FlavorFusion</Link> {/* Use Link instead of anchor tag */}
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link className="nav-link active" aria-current="page" to="/home">Home</Link> {/* Use Link for Home */}
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">About</Link> {/* Example link to About page */}
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link disabled" aria-disabled="true" to="/contact">Contact</Link> {/* Example disabled link */}
+            </li>
+          </ul>
+          <form className="d-flex ms-auto" role="search" onSubmit={(e) => e.preventDefault()}>
+            <input
+              className="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              value={searchQuery}
+              onChange={handleSearchChange}
+            />
+          </form>
+        </div>
+      </div>
+    </nav>
+  );
 }
 
-export default Navbar
+export default Navbar;

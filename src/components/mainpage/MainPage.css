@@ -1,0 +1,160 @@
+.container {
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    justify-content: space-between;
+    height: 90vh; /* Full viewport height */
+    max-width:  100%;
+
+    align-items: center;
+  }
+.main-image-container {
+  margin-top: 90px;
+
+    display: flex;
+    justify-content: flex-end; 
+    /* flex-basis: 50%;     */
+    height: 50vh;
+    padding-right: 100px; 
+  }
+  
+.image{
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    flex-basis: 45%;
+    /* margin-top: 30px; */
+    width: 70%;
+
+    border-style:outset;
+
+    
+}
+
+.text-section {
+    max-width: 500px;
+    /* display: flex; */
+ margin-left: 50px;
+  
+    color: #AAA777;
+    /* max-width: 50%;   */
+ }
+ .heading{
+  
+    font-size: 60px;
+    font-family:'Times New Roman', Times, serif;
+    animation: fadeIn 3s ease-in-out; /* Apply animation */
+ }
+ .paragraph {
+    color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    /* animation: typing 7s steps(40, end);  */
+  }
+
+ @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #AAA777;
+    }
+  }
+  
+ @media (max-width: 786px) {
+    .container {
+      flex-direction: column;
+      justify-content: center;
+      height: auto;
+      padding: 20px;
+      text-align: center;
+    }
+  
+    .main-image-container {
+      margin-right: 0;
+      margin-bottom: 30px;
+      padding-right: 0;
+    }
+  
+    .image {
+        width: 80%;
+      }
+    
+      .heading {
+        font-size: 32px;
+      }
+    
+      .paragraph {
+        font-size: 16px;
+      }
+  }
+  
+  @media (max-width: 480px) {
+    .container {
+        margin-top: 40px;
+      flex-direction: column; /* Ensure row direction */
+      justify-content: center; /* Distribute space between elements */
+      align-items: center;
+      text-align: center;
+      height: 70vh; 
+      /* padding: 60px; */
+    }
+  
+    .main-image-container {
+      
+      flex: 1; /* Allow image container to take available space */
+      display: flex;
+      justify-content: flex-start;
+      /* padding-top: 0px; */
+      margin-left: 50px;
+    }
+  
+
+  
+    .text-section {
+      flex: 1; /* Allow text section to take available space */
+      margin-top: 0;
+      margin-left: 10px;
+      color: #AAA777;
+      text-align: left;
+    }
+  
+    .image {
+        width: 70%;
+      }
+    
+      .heading {
+        font-size: 32px;
+       padding-top: 10px;
+       padding-bottom: 20px;
+       padding-right: 30px;
+       padding-left: 40px;
+      }
+    
+      .paragraph {
+        font-size: 12px;
+        /* padding-top: 10px; */
+        /* padding-bottom: 20px; */
+        padding-right: 30px;
+        padding-left: 40px;
+      }
+  }
