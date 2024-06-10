@@ -1,5 +1,5 @@
 import React from 'react';
-import image from '../../assets/pakistani-food-biryani.jpg.webp';
+import image from '../../assets/burger-with-melted-cheese.jpg';
 import './MainPage.css';
 import { useEffect } from 'react';
 

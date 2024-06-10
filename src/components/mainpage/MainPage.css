@@ -22,7 +22,7 @@
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     flex-basis: 45%;
     /* margin-top: 30px; */
-    width: 70%;
+    width: 190%;
 
     border-style:outset;
 
@@ -33,6 +33,7 @@
     max-width: 500px;
     /* display: flex; */
  margin-left: 50px;
+ margin-top: 70PX;
   
     color: #AAA777;
     /* max-width: 50%;   */
@@ -110,7 +111,7 @@
   
   @media (max-width: 480px) {
     .container {
-        margin-top: 40px;
+        margin-top: 80px;
       flex-direction: column; /* Ensure row direction */
       justify-content: center; /* Distribute space between elements */
       align-items: center;
@@ -132,7 +133,7 @@
   
     .text-section {
       flex: 1; /* Allow text section to take available space */
-      margin-top: 0;
+      margin-top: 70PX;
       margin-left: 10px;
       color: #AAA777;
       text-align: left;

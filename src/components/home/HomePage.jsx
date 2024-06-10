@@ -1,15 +1,15 @@
 import React, { useEffect } from 'react';
 import Slider from 'react-slick';
-import golgappa from '../../assets/Golgappa.jpg';
+// import golgappa from '../../assets/Golgappa.jpg';
 import karhi from '../../assets/chickenKarahi.jpg';
 import nihaari from '../../assets/Nihari.jpg';
-import AlooGosht from '../../assets/AlooGosht.jpg';
-import Samosa from '../../assets/Samosa.jpg';
+// import AlooGosht from '../../assets/AlooGosht.jpg';
+import biryani from '../../assets/pakistani-food-biryani.jpg.webp';
 import chapli from '../../assets/chapliKaba.jpg';
 import naan from '../../assets/Peshawrinaan.jpg';
-import chanaPulao from '../../assets/Chana-Pulao-or-Chana-Pilau-Recipe-540x720.jpg';
+// import chanaPulao from '../../assets/Chana-Pulao-or-Chana-Pilau-Recipe-540x720.jpg';
 import mixsabzi from '../../assets/Mixed-Sabzi-Mix-Vegetable-Curry-540x720.jpg';
-import Aloobengan from '../../assets/Aloo-Baingan-540x720.jpg';
+// import Aloobengan from '../../assets/Aloo-Baingan-540x720.jpg';
 import Aloobhujia from '../../assets/Aloo-Ki-Bhujia-With-Tomatoes-360x480.jpg';
 import Aloogobi from '../../assets/Pakistani-Aloo-Gobi-540x720.jpg';
 import MatarPulao from '../../assets/Matar-Pulao-or-Pea-Pilau-540x720.jpg';
@@ -26,20 +26,21 @@ function HomePage() {
 
   // Sample data for the carousel items
   const carouselData1 = [
-    { id: 1, title: 'Gol Gappa', imageUrl: golgappa },
+    // { id: 1, title: 'Gol Gappa', imageUrl: golgappa },
     { id: 2, title: 'Nihari', imageUrl: nihaari },
     { id: 3, title: 'Chicken karahi', imageUrl: karhi },
-    { id: 4, title: 'Aloo gosht', imageUrl: AlooGosht},
-    { id: 5, title: 'Samosa', imageUrl: Samosa},
+    // { id: 4, title: 'Aloo gosht', imageUrl: AlooGosht},
+   
+    { id: 5, title: 'chicken biryani', imageUrl: biryani,className:"biryani"},
     { id: 6, title: 'Chapli Kebab', imageUrl: chapli},
     { id: 7, title: 'Peshaawri Naan', imageUrl: naan},
     // Add more carousel items as needed
   ];
 
   const carouselData2 = [
-    { id: 1, title: 'Chana Pulao', imageUrl: chanaPulao },
+    // { id: 1, title: 'Chana Pulao', imageUrl: chanaPulao },
     { id: 2, title: 'Mixed-Sabzi', imageUrl: mixsabzi},
-    { id: 3, title: 'Aloo-Baingan', imageUrl: Aloobengan },
+    // { id: 3, title: 'Aloo-Baingan', imageUrl: Aloobengan },
     { id: 4, title: 'Aloo-Ki-Bhujia', imageUrl: Aloobhujia},
     { id: 5, title: 'Aloo-Gobi', imageUrl: Aloogobi},
     { id: 6, title: 'Matar-Pulao', imageUrl: MatarPulao},
@@ -121,7 +122,7 @@ function HomePage() {
   
     </div>
     <div className="homepage">
-      <h1 className='h1'>Vegetarian Dishes</h1>
+      <h1 className='h1'>Dishes You Should Try</h1>
     <div className="slider-container slider2">
         <Slider {...settings2}>
           {carouselData2.map(item => (

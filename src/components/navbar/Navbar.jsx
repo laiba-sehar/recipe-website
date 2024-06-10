@@ -25,14 +25,18 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/home">Home</Link> {/* Use Link for Home */}
+              <Link className="nav-link active" aria-current="page" to="/home">Pakistani</Link> {/* Use Link for Home */}
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">About</Link> {/* Example link to About page */}
+              <Link className="nav-link" to="/chinese">Chinese</Link> {/* Example link to About page */}
             </li>
             <li className="nav-item">
-              <Link className="nav-link disabled" aria-disabled="true" to="/contact">Contact</Link> {/* Example disabled link */}
+              <Link className="nav-link" to="/thai">Thai</Link> {/* Example link to About page */}
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/italian">Italian</Link> {/* Example link to About page */}
+            </li>
+        
           </ul>
           <form className="d-flex ms-auto" role="search" onSubmit={(e) => e.preventDefault()}>
             <input
