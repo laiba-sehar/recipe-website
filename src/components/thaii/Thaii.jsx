@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Slider from 'react-slick';
 import GreenCurry from '../../assets/Green-Curry.jpg';
@@ -15,24 +14,25 @@ import TomYumGoong  from '../../assets/Tom Yum Goong .jpg';
 import Yumnua from '../../assets/Yum nua.jpg';
 import Eggtart from '../../assets/Egg tart.jpg';
 import Pekingduck from '../../assets/Peking duck.jpg';
+import { Link } from 'react-router-dom';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-// import './HomePage.css';
+import './Thaii.css';
 
-function Chinese() {
+function Thaii() {
+
     useEffect(() => {
         // Initialize any additional settings or configurations for the carousel
       }, []);
-
       const carouselData1 = [
-        // { id: 1, title: 'Gaeng Keow Wan Gai', imageUrl: GreenCurry },
-        { id: 2, title: 'Gaeng Daeng', imageUrl:GaengDaeng },
-        { id: 3, title: 'Kaeng Lueang', imageUrl: KaengLueang },
-        { id: 4, title: 'Pad Kra Pao Moo', imageUrl: PadKraPaoMoo},
+        //  { id: 1, title: 'Gaeng Keow Wan Gai', imageUrl: GreenCurry },
+        { id: 6, title: 'Gaeng Daeng', imageUrl:GaengDaeng },
+        { id: 7, title: 'Kaeng Lueang', imageUrl: KaengLueang },
+        { id: 8, title: 'Pad Kra Pao Moo', imageUrl: PadKraPaoMoo},
         // { id: 5, title: 'Khao Niao Mamuang', imageUrl: KhaoNiaoMamuang},
-        { id: 6, title: 'Khao Soi', imageUrl: KhaoSoi},
-        { id: 7, title: 'Laab', imageUrl:Laab},
+        { id: 9, title: 'Khao Soi', imageUrl: KhaoSoi},
+        { id: 10, title: 'Laab', imageUrl:Laab},
         // Add more carousel items as needed
       ];
     
@@ -101,38 +101,42 @@ function Chinese() {
           }
         ]
       };
-    
-  return (
-    <>
-    <div className="homepage">
-      <h1 className='h1'>Popular Dishes</h1>
-      <div className="slider-container">
-        <Slider {...settings1}>
-          {carouselData1.map(item => (
-            <div key={item.id} className={`image-container ${item.className}`}>
-              <img src={item.imageUrl} alt={item.title} />
-              <h3>{item.title}</h3>
-            </div>
-          ))}
-        </Slider>
-      </div>
-  
-    </div>
-    <div className="homepage">
-      <h1 className='h1'>Dishes You Should Try</h1>
-    <div className="slider-container slider2">
-        <Slider {...settings2}>
-          {carouselData2.map(item => (
-            <div key={item.id} className={`image-container ${item.className}`}>
-              <img src={item.imageUrl} alt={item.title} />
-              <h3>{item.title}</h3>
-            </div>
-          ))}
-        </Slider>
-      </div>
-      </div>
-      </>
-  )
+
+      return (
+        <>
+          <div className="homepage">
+          <h1 className='h1'>Popular Dishes</h1>
+          <div className="slider-container slider1">
+            <Slider {...settings1}>
+              {carouselData1.map(item => (
+                <Link to={`/Thai-recipe/${item.id}`} key={item.id} className={`image-container ${item.className}`}>
+                  <img src={item.imageUrl} alt={item.title} />
+                  <h3>{item.title}</h3>
+                  </Link>
+   
+              ))}
+            </Slider>
+          </div>
+      
+        </div> 
+        <div className="homepage">
+          <h1 className='h1'>Dishes You Should Try</h1>
+        <div className="slider-container slider2">
+            <Slider {...settings2}>
+              {carouselData2.map(item => (
+                <Link to={`/Thai-recipe/${item.id}`} key={item.id} className={`image-container ${item.className}`}>
+                  <img src={item.imageUrl} alt={item.title} />
+                
+                  <h3>{item.title}</h3>
+                  </Link>
+            
+              ))}
+            </Slider>
+          </div>
+          </div>
+      
+          </>
+      )
 }
 
-export default Chinese
+export default Thaii

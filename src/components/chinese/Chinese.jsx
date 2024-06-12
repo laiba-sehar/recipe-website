@@ -1,5 +1,6 @@
 
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Slider from 'react-slick';
 import Chowmin from '../../assets/Chow Mein.webp';
 import Dumplings from '../../assets/Dumplings.webp';
@@ -18,7 +19,7 @@ import Pekingduck from '../../assets/Peking duck.jpg';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-// import './HomePage.css';
+import './Chinese.css';
 
 function Chinese() {
     useEffect(() => {
@@ -37,12 +38,12 @@ function Chinese() {
       ];
     
       const carouselData2 = [
-        { id: 1, title: 'Dim sum', imageUrl: Dimsum },
-        { id: 2, title: 'Xiaolongbao', imageUrl: Xiaolongbao},
-        { id: 3, title: 'Jianbing', imageUrl: Jianbing },
-        { id: 4, title: 'Biangbiang noodles', imageUrl: Biangbiangnoodles},
-        { id: 5, title: 'Mapo tofu', imageUrl: Mapotofu},
-        // { id: 6, title: 'Egg tart', imageUrl: Eggtart},
+        // { id: 6, title: 'Dim sum', imageUrl: Dimsum },
+        { id: 6, title: 'Xiaolongbao', imageUrl: Xiaolongbao},
+        { id: 7, title: 'Jianbing', imageUrl: Jianbing },
+        { id: 8, title: 'Biangbiang noodles', imageUrl: Biangbiangnoodles},
+        { id: 9, title: 'Mapo tofu', imageUrl: Mapotofu},
+         { id:10, title: 'Egg tart', imageUrl: Eggtart},
         // { id: 7, title: 'Peking duck', imageUrl: Pekingduck},
         // Add more carousel items as needed
       ];
@@ -106,13 +107,14 @@ function Chinese() {
     <>
     <div className="homepage">
       <h1 className='h1'>Popular Dishes</h1>
-      <div className="slider-container">
+      <div className="slider-container slider1">
         <Slider {...settings1}>
           {carouselData1.map(item => (
-            <div key={item.id} className={`image-container ${item.className}`}>
+            <Link to={`/chinese-recipe/${item.id}`} key={item.id} className={`image-container ${item.className}`}>
               <img src={item.imageUrl} alt={item.title} />
               <h3>{item.title}</h3>
-            </div>
+              </Link>
+         
           ))}
         </Slider>
       </div>
@@ -123,10 +125,11 @@ function Chinese() {
     <div className="slider-container slider2">
         <Slider {...settings2}>
           {carouselData2.map(item => (
-            <div key={item.id} className={`image-container ${item.className}`}>
+            <Link to={`/chinese-recipe/${item.id}`} key={item.id} className={`image-container ${item.className}`}>
               <img src={item.imageUrl} alt={item.title} />
               <h3>{item.title}</h3>
-            </div>
+              </Link>
+         
           ))}
         </Slider>
       </div>

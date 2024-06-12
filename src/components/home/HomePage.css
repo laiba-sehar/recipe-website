@@ -6,78 +6,116 @@
     background-color: rgb(170, 167, 119);
     text-align: center;
     max-width: 70%;
-    height:50vh;
-    border-radius: 10px; 
+    height: 50vh;
+    border-radius: 10px;
     margin-bottom: 100px;
   }
-  .h1{
+  
+  .h1 {
     color: rgb(108, 106, 103);
     text-align: start;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
-  }
-  
-  .slider-container {
-    width: 80%;
-    max-width: 1000px;
-    margin: 0 auto;
-  
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
   }
   
   .slick-slide {
-       /* margin-bottom: 50px; */
     height: 30vh;
     display: flex !important;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 5px; /* Reduced padding to match the second slider */
+  }
+  .slider1 .slick-slide {
+    height: 35vh;
+    padding: 5px; /* Adjust padding to reduce overall height */
+  }
+  .slider2 .slick-slide {
+    height: 35vh;
+    padding: 5px; /* Adjust padding to reduce overall height */
+  }
+  
+  .image-container a {
+    color: white; /* Set the text color to white */
+    text-decoration: none; /* Remove underline */
   }
   
   .image-container {
-    border-radius: 10px;
+    position: relative;
     border-radius: 10px;
     height: 20vh;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    /* overflow: hidden; */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    cursor: pointer;
+    text-decoration: none;
+    color: rgb(62, 56, 56);
   }
+  
   .slick-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* You can also add additional styles here */
   }
+  
   .slider2 .image-container img {
-    max-height: 150px; /* Set the height for images in the second slider */
-    /* object-fit: cover; */
-    width: 255px;
+    max-height: 150px; 
+    width: 245px;
   }
-  .slider2 .slick-slide {
-    /* margin-bottom: 50px; */
-    height: 35vh;
-    padding: 5px; /* Adjust padding to reduce overall height */
+  .slider1 .image-container img {
+    max-height: 150px; 
+    width: 245px;
   }
+  
   .slider2 {
-    
     margin-bottom: 80px; /* Add margin at the bottom of the second slider */
   }
-  .biryani  {
+  .slider1 {
+    margin-bottom: 80px; /* Add margin at the bottom of the second slider */
+  }
+  
+  .biryani {
     height: 140px;
-     /* Adjust this value as needed */
-     width: 100%;
+    width: 200%;
     object-fit: cover; /* Ensure the image covers the container */
   }
   
+  .image-container:hover {
+    transform: scale(1.05); /* Slightly enlarge the image container */
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  }
   
-
-
-
+  .image-container:hover img {
+    filter: brightness(1.1); /* Increase brightness on hover */
+  }
+  
+  .image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.3);  */
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Smooth transition for overlay effect */
+    /* z-index: 1; */
+  }
+  
+  .image-container:hover::before {
+    opacity: 1; /* Show the overlay on hover */
+  }
   
   .image-container img {
     border-radius: 10px;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
   }
+  
   @media (max-width: 768px) {
+    .slider1 .slick-slide {
+      padding: 10px; /* Add padding to create space between images in the first slider */
+    }
     .slider2 .image-container img {
       max-height: 100px; /* Set the height for images in the second slider on smaller devices */
       width: 150px; /* Set the width for images in the second slider on smaller devices */
@@ -92,19 +130,33 @@
       margin-bottom: 50px; /* Add margin at the bottom of the second slider on smaller devices */
     }
   }
+  
   @media (max-width: 486px) {
+
+    
+      
+      
+      
+    .slider1 .slick-slide {
+      padding: 10px; /* Add padding to create space between images in the first slider */
+    }
+    .slider1 .image-container img {
+        max-width: 190px;
+      /* max-height: 100px;  */
+      /* width: 10px; */
+    }
+    
     .slider2 .image-container img {
-      max-height: 100px; /* Set the height for images in the second slider on smaller devices */
-      width: 150px; /* Set the width for images in the second slider on smaller devices */
+     max-width: 190px;
     }
   
     .slider2 .slick-slide {
       height: 25vh; /* Adjust the height of the second slider's slides on smaller devices */
-      padding: 5px; /* Adjust padding to reduce overall height */
+      padding: 10px; 
     }
   
     .slider2 {
       margin-bottom: 50px; /* Add margin at the bottom of the second slider on smaller devices */
     }
   }
-    
+  

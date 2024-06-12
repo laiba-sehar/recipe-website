@@ -1,0 +1,149 @@
+.homepage {
+    margin-top: 140px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(170, 167, 119);
+    text-align: center;
+    max-width: 70%;
+    height: 50vh;
+    border-radius: 10px; 
+    margin-bottom: 100px;
+  }
+  
+  .h1 {
+    color: rgb(108, 106, 103);
+    text-align: start;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+  
+  /* .slider-container {
+    width: 79%;
+    max-width: 1000px;
+    margin: 0 auto;
+  } */
+  
+  .slick-slide {
+    height: 30vh;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 5px; /* Reduced padding to match the second slider */
+  }
+  .slider1 .slick-slide {
+    height: 35vh;
+    padding: 5px; /* Adjust padding to reduce overall height */
+  }
+  .slider2 .slick-slide {
+    height: 35vh;
+    padding: 5px; /* Adjust padding to reduce overall height */
+  }
+  
+  .image-container a {
+    color: white; /* Set the text color to white */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .image-container {
+    position: relative;
+    border-radius: 10px;
+    height: 20vh;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .slick-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .slider2 .image-container img {
+    max-height: 150px; 
+    width: 245px;
+  }
+  .slider1 .image-container img {
+    max-height: 150px; 
+    width: 245px;
+  }
+  
+  .slider2 {
+    margin-bottom: 80px; /* Add margin at the bottom of the second slider */
+  }
+  .slider1 {
+    margin-bottom: 80px; /* Add margin at the bottom of the second slider */
+  }
+  
+  .biryani {
+    height: 140px;
+    width: 200%;
+    object-fit: cover; /* Ensure the image covers the container */
+  }
+  
+  .image-container:hover {
+    transform: scale(1.05); /* Slightly enlarge the image container */
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+  }
+  
+  .image-container:hover img {
+    filter: brightness(1.1); /* Increase brightness on hover */
+  }
+  
+  .image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.3);  */
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Smooth transition for overlay effect */
+    z-index: 1; /* Ensure the overlay is above the image */
+  }
+  
+  .image-container:hover::before {
+    opacity: 1; /* Show the overlay on hover */
+  }
+  
+  .image-container img {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .slider2 .image-container img {
+      max-height: 100px; /* Set the height for images in the second slider on smaller devices */
+      width: 150px; /* Set the width for images in the second slider on smaller devices */
+    }
+  
+    .slider2 .slick-slide {
+      height: 25vh; /* Adjust the height of the second slider's slides on smaller devices */
+      padding: 5px; /* Adjust padding to reduce overall height */
+    }
+  
+    .slider2 {
+      margin-bottom: 50px; /* Add margin at the bottom of the second slider on smaller devices */
+    }
+  }
+  
+  @media (max-width: 486px) {
+    .slider2 .image-container img {
+      max-height: 100px; /* Set the height for images in the second slider on smaller devices */
+      width: 150px; /* Set the width for images in the second slider on smaller devices */
+    }
+  
+    .slider2 .slick-slide {
+      height: 25vh; /* Adjust the height of the second slider's slides on smaller devices */
+      padding: 5px; /* Adjust padding to reduce overall height */
+    }
+  
+    .slider2 {
+      margin-bottom: 50px; /* Add margin at the bottom of the second slider on smaller devices */
+    }
+  }

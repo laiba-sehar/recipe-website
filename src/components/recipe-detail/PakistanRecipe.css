@@ -1,0 +1,51 @@
+.recipe-container {
+    margin-top: 100px;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(170, 167, 119);
+    text-align: center;
+    max-width: 50%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .recipe-container h1 {
+    color: rgb(108, 106, 103);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 20px;
+  }
+  
+  .recipe-section {
+    text-align: left; /* Align content to the left within recipe sections */
+    margin-bottom: 20px; /* Add spacing between sections */
+  }
+  
+  .recipe-section h2 {
+    color: rgb(15, 15, 15);
+    font-family: Arial, sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  .recipe-section ul,
+  .recipe-section ol {
+    padding-left: 20px; /* Indent the list items */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .recipe-section li {
+    color: rgb(17, 14, 14);
+    line-height: 1.6;
+  }
+  
+@media (max-width: 768px) {
+    .recipe-container {
+      max-width: 90%; /* Adjust the container width for smaller devices */
+    }
+  }
+
+@media (max-width: 48p6x) {
+    .recipe-container {
+      max-width: 90%; /* Adjust the container width for smaller devices */
+    }
+  }

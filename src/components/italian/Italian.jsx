@@ -15,6 +15,7 @@ import Ossobuco from '../../assets/Ossobuco.jpg';
 import Risotto  from '../../assets/Risotto.jpg';
 import Truffles from '../../assets/Truffles.jpg';
 import Eggtart from '../../assets/Egg tart.jpg';
+import { Link } from 'react-router-dom';
 import Pekingduck from '../../assets/Peking duck.jpg';
 
 import 'slick-carousel/slick/slick.css';
@@ -26,21 +27,21 @@ function Italian() {
 
       const carouselData1 = [
         // { id: 1, title: 'Gaeng Keow Wan Gai', imageUrl: GreenCurry },
-        { id: 2, title: 'Cacio e Pepe', imageUrl:CacioePepe },
-        { id: 3, title: 'Canederli', imageUrl: Canederli },
-        { id: 4, title: 'Pizza Napoletana', imageUrl: Pizza },
+        { id: 1, title: 'Cacio e Pepe', imageUrl:CacioePepe },
+        { id: 2, title: 'Canederli', imageUrl: Canederli },
+        { id: 3, title: 'Pizza Napoletana', imageUrl: Pizza },
         // { id: 5, title: 'Khao Niao Mamuang', imageUrl: KhaoNiaoMamuang},
-        { id: 6, title: 'Arancini', imageUrl: arancini },
-        { id: 7, title: 'Lasagna', imageUrl:Lasagna},
+        { id: 4, title: 'Arancini', imageUrl: arancini },
+        { id: 5, title: 'Lasagna', imageUrl:Lasagna},
         // Add more carousel items as needed
       ];
     
       const carouselData2 = [
-        { id: 1, title: 'Focaccia', imageUrl: Focaccia },
-        { id: 2, title: 'Italian Cheese', imageUrl: Cheese},
-        { id: 3, title: 'Ossobuco', imageUrl: Ossobuco },
-        { id: 4, title: 'Risotto', imageUrl: Risotto},
-        { id: 5, title: 'Truffles', imageUrl: Truffles},
+        { id: 6, title: 'Focaccia', imageUrl: Focaccia },
+        { id: 7, title: 'Italian Cheese', imageUrl: Cheese},
+        { id: 8, title: 'Ossobuco', imageUrl: Ossobuco },
+        { id: 9, title: 'Risotto', imageUrl: Risotto},
+        { id: 10, title: 'Truffles', imageUrl: Truffles},
         // { id: 6, title: 'Egg tart', imageUrl: Eggtart},
         // { id: 7, title: 'Peking duck', imageUrl: Pekingduck},
         // Add more carousel items as needed
@@ -105,13 +106,14 @@ function Italian() {
     <>
     <div className="homepage">
       <h1 className='h1'>Popular Dishes</h1>
-      <div className="slider-container">
+      <div className="slider-container slider1">
         <Slider {...settings1}>
           {carouselData1.map(item => (
-            <div key={item.id} className={`image-container ${item.className}`}>
+            <Link to={`/italian-recipe/${item.id}`} key={item.id} className={`image-container ${item.className}`}>
               <img src={item.imageUrl} alt={item.title} />
               <h3>{item.title}</h3>
-            </div>
+              </Link>
+        
           ))}
         </Slider>
       </div>
@@ -122,10 +124,11 @@ function Italian() {
     <div className="slider-container slider2">
         <Slider {...settings2}>
           {carouselData2.map(item => (
-            <div key={item.id} className={`image-container ${item.className}`}>
+            <Link to={`/italian-recipe/${item.id}`} key={item.id} className={`image-container ${item.className}`}>
               <img src={item.imageUrl} alt={item.title} />
               <h3>{item.title}</h3>
-            </div>
+              </Link>
+        
           ))}
         </Slider>
       </div>

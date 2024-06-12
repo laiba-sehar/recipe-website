@@ -34,12 +34,12 @@
   color: #AAA777;
 }
 
-.navbar .nav-link.active
- {
-  color: #f8f9fa; /* Change this to your desired hover/active color */
+.navbar .nav-link.active {
+  color: #AAA777; /* Change this to your desired active color */
 }
+
 .navbar .nav-link:focus,
-.navbar .nav-link:hover{
+.navbar .nav-link:hover {
   color: #AAA777; 
 }
 
